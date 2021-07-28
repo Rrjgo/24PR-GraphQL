@@ -1,3 +1,3 @@
 # 24PR-GraphQL
 
-https://24pullrequests.com/api
+Implementing a GraphQL backend from REST API - https://24pullrequests.com/api
