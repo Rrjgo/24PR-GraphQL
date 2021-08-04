@@ -1,0 +1,30 @@
+{
+  "name": "24pr-graphql",
+  "version": "1.0.0",
+  "description": "Implementing a GraphQL backend from REST API - https://24pullrequests.com/api",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "^3.0.2",
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.14.9",
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "dev": "nodemon --exec npm run babel-node",
+    "babel-node": "babel-node --presets=@babel/preset-env -- ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rrjgo/24PR-GraphQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rrjgo/24PR-GraphQL/issues"
+  },
+  "homepage": "https://github.com/Rrjgo/24PR-GraphQL#readme"
+}
