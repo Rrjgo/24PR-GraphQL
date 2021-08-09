@@ -1,4 +1,4 @@
 {
   "presets": ["@babel/preset-env"],
-  "plugins": ["import-graphql", "graphql-tag"]
+  "plugins": ["import-graphql"]
 }
