@@ -1,14 +1,43 @@
- # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
+type Query {
+  projects: [Project]
+  contributions: [Contribution]
+  users: [User]
+  user(name: String!): User
+  organisations: [Organisation]
+  organisation(name: String!): Organisation
+}
 
-  # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
-    title: String
-    author: String
-  }
 
-  # The "Query" type is special: it lists all of the available queries that
-  # clients can execute, along with the return type for each. In this
-  # case, the "books" query returns an array of zero or more Books (defined above).
-  type Query {
-    books: [Book]
-  }
+type Project {
+  description: String
+  githubURL: String
+  mainLanguage: String
+  contributions: [Contribution]
+}
+
+type Contribution {
+  title: String
+  issueURL: String
+  repoName: String
+  body: String  
+  project: Project
+  user: User
+}
+
+type User {
+  id: ID
+  nickname: String
+  gravatarID: String
+  githubProfile: String
+  contributionsCount: Int
+  link: String
+  contributions: [Contribution]
+  organisations: [Organisation]
+}
+
+type Organisation {
+  login: String
+  avatarURL: String
+  link: String
+  users: [User]
+}

@@ -9,15 +9,15 @@
     "graphql-tag": "^2.12.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.0",
+    "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
-    "@babel/node": "^7.15.0",
+    "@babel/node": "^7.14.9",
     "@babel/preset-env": "^7.15.0",
     "babel-plugin-import-graphql": "^2.8.1",
     "nodemon": "^2.0.12"
   },
   "scripts": {
-    "dev": "nodemon --exec ./node_modules/.bin/babel-node src/index.js",
+    "dev":  "rm -rf ./node_modules/.cache/@babel && nodemon -e graphql,js --exec ./node_modules/.bin/babel-node src/index.js",
     "clean": "rm -rf ./node_modules/.cache/@babel"
   },
   "repository": {
